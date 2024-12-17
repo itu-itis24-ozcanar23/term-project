@@ -27,6 +27,15 @@ a:hover {
   font-weight: bold;
 }
 
+#game-section {
+  background-color: rgb(245, 245, 220);
+  border: 2px solid rgb(182, 162, 142);
+  margin: 2vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
 .section {
   background-color: rgb(245, 245, 220);
   border: 2px solid rgb(182, 162, 142);
