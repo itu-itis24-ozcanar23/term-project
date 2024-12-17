@@ -10,6 +10,10 @@ function resetGame() {
   }
 }
 
+function revealLetter(letterIndex) {
+  letterImages[letterIndex].style.visibility = "visible";
+}
+
 function getLetterIndexOf(letter) {
   for (let i = 0; i < word.length; i++) {
     const c = word[i];
@@ -22,5 +26,5 @@ function getLetterIndexOf(letter) {
 function onSubmit() {
   let input = textInputField.value;
   let letterIndex = getLetterIndexOf(input);
-  console.log(letterIndex);
+  revealLetter(letterIndex);
 }
