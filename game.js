@@ -1,5 +1,14 @@
 word = "PRISM";
 textInputField = document.getElementById("input-field");
+letterImages = document.getElementsByClassName("letter-image");
+resetGame();
+
+function resetGame() {
+  for (let i = 0; i < letterImages.length; i++) {
+    const letterImage = letterImages[i];
+    letterImage.style.visibility = "hidden";
+  }
+}
 
 function getLetterIndexOf(letter) {
   for (let i = 0; i < word.length; i++) {
