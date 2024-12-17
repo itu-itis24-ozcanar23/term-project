@@ -1,6 +1,7 @@
 word = "PRISM";
 lives = 3;
 score = 0;
+playerLost = false;
 
 textInputField = document.getElementById("input-field");
 letterImages = document.getElementsByClassName("letter-image");
@@ -16,6 +17,8 @@ function resetGame() {
     const letterImage = letterImages[i];
     letterImage.style.visibility = "hidden";
   }
+
+  playerLost = false;
   lives = 3;
   score = 0;
   updateTexts();
@@ -35,10 +38,12 @@ function getLetterIndexOf(letter) {
 }
 
 function onSubmit() {
+  if (playerLost) return;
+
   let input = textInputField.value;
   if (input.length != 1) {
     alert("You must only write one letter. As a punishment, you lose!");
-    resetGame();
+    playerLost = true;
     return;
   }
 
@@ -55,8 +60,8 @@ function onSubmit() {
   updateTexts();
 
   if (lives == 0) {
+    playerLost = true;
     alert("You lost! You ran out of lives...");
-    resetGame();
   }
 
   if (score == 100) {
