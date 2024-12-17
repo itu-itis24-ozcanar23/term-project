@@ -42,8 +42,17 @@ function onSubmit() {
 
   let input = textInputField.value;
   if (input.length != 1) {
-    alert("You must only write one letter. As a punishment, you lose!");
-    playerLost = true;
+    if (input == word) {
+      alert("Correct guess! You win.");
+      score = 100;
+      for (let i = 0; i < word.length; i++) {
+        revealLetter(i);
+      }
+    } else {
+      alert("Wrong guess! You lost.");
+      playerLost = true;
+    }
+
     return;
   }
 
