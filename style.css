@@ -48,3 +48,9 @@ a:hover {
   width: 70vw;
   margin-left: 15vw;
 }
+
+.image {
+  width: 180px;
+  height: 180px;
+  background-color: gray;
+}
