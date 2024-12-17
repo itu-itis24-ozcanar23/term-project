@@ -58,4 +58,8 @@ function onSubmit() {
     alert("You lost! You ran out of lives...");
     resetGame();
   }
+
+  if (score == 100) {
+    alert("You won! Very impressive.");
+  }
 }
