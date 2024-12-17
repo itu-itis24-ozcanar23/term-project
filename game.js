@@ -36,6 +36,12 @@ function getLetterIndexOf(letter) {
 
 function onSubmit() {
   let input = textInputField.value;
+  if (input.length != 1) {
+    alert("You must only write one letter. As a punishment, you lose!");
+    resetGame();
+    return;
+  }
+
   let letterIndex = getLetterIndexOf(input);
 
   // -1 is for invalid letter
@@ -49,7 +55,7 @@ function onSubmit() {
   updateTexts();
 
   if (lives == 0) {
-    alert("You lost!");
+    alert("You lost! You ran out of lives...");
     resetGame();
   }
 }
