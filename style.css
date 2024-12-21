@@ -89,3 +89,20 @@ button:hover {
 #input-field {
     height: 30px;
 }
+
+#picture {
+    width: 200px;
+    border: 2px solid var(--border-color);
+}
+
+#sub-section {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    margin-bottom: 20px;
+}
+
+#description {
+    margin-left: 20px;
+    font-family: sans;
+}
