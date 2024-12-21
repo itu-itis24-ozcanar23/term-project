@@ -43,11 +43,12 @@ function onSubmit() {
   let input = textInputField.value;
   if (input.length != 1) {
     if (input == word) {
-      alert("Correct guess! You win.");
       score = 100;
+      updateTexts();
       for (let i = 0; i < word.length; i++) {
         revealLetter(i);
       }
+      alert("Correct guess! You win.");
     } else {
       alert("Wrong guess! You lost.");
       playerLost = true;

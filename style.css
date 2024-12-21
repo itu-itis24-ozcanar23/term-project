@@ -7,7 +7,7 @@ body {
 #navbar {
   margin: 0;
   background-color: rgb(245, 245, 220);
-  border-bottom: 4px solid rgb(182, 162, 142);
+  border-bottom: 2px solid rgb(182, 162, 142);
   width: 100%;
   height: 55px;
   padding-top: 15px;
@@ -31,9 +31,12 @@ a:hover {
   background-color: rgb(245, 245, 220);
   border: 2px solid rgb(182, 162, 142);
   margin: 2vw;
+  margin-left: 20vw;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  width: 60vw;
+  overflow: hidden;
 }
 
 .section {
@@ -52,9 +55,33 @@ a:hover {
 .image-container {
   width: 180px;
   height: 180px;
-  background-color: gray;
+  border: 1px solid rgb(180, 80, 37);
+  background-color: rgb(182, 162, 142);
 }
 
 .letter-image {
   visibility: hidden;
+}
+
+button {
+    margin-top: 20px;
+    border: 2px solid black;
+    background-color: rgb(180, 80, 37);
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+}
+
+button:hover {
+    color: lightgray;
+}
+
+.statistic {
+    margin-top: 40px;
+    font-weight: bold;
+    font-family: sans;
+}
+
+#input-field {
+    height: 30px;
 }
