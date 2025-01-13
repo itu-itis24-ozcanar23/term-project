@@ -1,7 +1,7 @@
-word = "PRISM";
-lives = 3;
-score = 0;
-playerLost = false;
+const word = "PRISM";
+let lives = 3;
+let score = 0;
+let gameRunning = true;
 
 textInputField = document.getElementById("input-field");
 letterImages = document.getElementsByClassName("letter-image");
@@ -18,7 +18,7 @@ function resetGame() {
     letterImage.style.visibility = "hidden";
   }
 
-  playerLost = false;
+  gameRunning = true;
   lives = 3;
   score = 0;
   updateTexts();
@@ -38,22 +38,23 @@ function getLetterIndexOf(letter) {
 }
 
 function onSubmit() {
-  if (playerLost) return;
+  if (!gameRunning) return;
 
-  let input = textInputField.value;
+  let input = textInputField.value.toUpperCase();
   if (input.length != 1) {
     if (input == word) {
       score = 100;
-      updateTexts();
       for (let i = 0; i < word.length; i++) {
         revealLetter(i);
       }
       alert("Correct guess! You win.");
     } else {
+      lives = 0;
       alert("Wrong guess! You lost.");
-      playerLost = true;
     }
 
+    gameRunning = false;
+    updateTexts();
     return;
   }
 
@@ -70,11 +71,12 @@ function onSubmit() {
   updateTexts();
 
   if (lives == 0) {
-    playerLost = true;
+    gameRunning = false;
     alert("You lost! You ran out of lives...");
   }
 
   if (score == 100) {
+    gameRunning = false;
     alert("You won! Very impressive.");
   }
 }

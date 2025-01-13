@@ -1,9 +1,9 @@
 body {
   --bg-color: rgb(37, 113, 128);
-  --text-color: rgb(242, 229, 191);
+  --text-color: white;
   --border-color: rgb(203, 96, 64);
   --light-color: rgb(253, 139, 81);
-  background-color: var(--bg-color); 
+  background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
 }
@@ -68,41 +68,41 @@ a:hover {
 }
 
 button {
-    margin-top: 20px;
-    border: 2px solid var(--fg-color);
-    background-color: var(--border-color);
-    color: white;
-    font-weight: bold;
-    padding: 8px;
+  margin-top: 20px;
+  border: 2px solid var(--fg-color);
+  background-color: var(--border-color);
+  color: white;
+  font-weight: bold;
+  padding: 8px;
 }
 
 button:hover {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .statistic {
-    margin-top: 40px;
-    font-weight: bold;
-    font-family: sans;
+  margin-top: 40px;
+  font-weight: bold;
+  font-family: sans;
 }
 
 #input-field {
-    height: 30px;
+  height: 30px;
 }
 
 #picture {
-    width: 200px;
-    border: 2px solid var(--border-color);
+  width: 200px;
+  border: 2px solid var(--border-color);
 }
 
 #sub-section {
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  margin-bottom: 20px;
 }
 
 #description {
-    margin-left: 20px;
-    font-family: sans;
+  margin-left: 20px;
+  font-family: sans;
 }
