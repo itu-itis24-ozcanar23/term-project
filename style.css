@@ -2,7 +2,7 @@ body {
   --bg-color: rgb(37, 113, 128);
   --text-color: white;
   --border-color: rgb(203, 96, 64);
-  --light-color: rgb(253, 139, 81);
+  --light-color: rgb(244, 135, 78);
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
@@ -51,6 +51,10 @@ a:hover {
   padding-right: 20px;
 }
 
+.section p {
+  font-size: 1.25rem;
+}
+
 #section-container {
   width: 70vw;
   margin-left: 15vw;
@@ -63,7 +67,7 @@ a:hover {
 
 .letter-image {
   visibility: hidden;
-  width: 200px;
+  width: 100%;
 }
 
 button {
