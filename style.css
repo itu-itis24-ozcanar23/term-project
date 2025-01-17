@@ -57,14 +57,13 @@ a:hover {
 }
 
 .image-container {
-  width: 180px;
-  height: 180px;
   border: 1px solid var(--fg-color);
   background-color: var(--border-color);
 }
 
 .letter-image {
   visibility: hidden;
+  width: 200px;
 }
 
 button {
